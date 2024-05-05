@@ -1,0 +1,23 @@
+Version 00.00.0001
+I updated .gitignore file to include the following Maven files:
+    terraform.tfstate
+    terraform.tfstate.backup
+    terraform.tfstate.lock
+
+    # Maven
+    target/
+    pom.xml.tag
+    pom.xml.releaseBackup
+    pom.xml.versionsBackup
+    pom.xml.next
+    release.properties
+    dependency-reduced-pom.xml
+    buildNumber.properties
+    .mvn/timing.properties
+    .mvn/wrapper/maven-wrapper.jar
+
+I then ran the following commands to tell git to ignore the Maven files:
+    git rm -r --cached target/
+    git commit -m "Untrack files in target directory" 
+    git push 
+
